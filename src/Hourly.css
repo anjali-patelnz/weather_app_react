@@ -1,0 +1,14 @@
+.Hourly,
+.card-body {
+  text-align: center;
+  background-color: black;
+}
+
+.card {
+  border: 1px solid #e3587b;
+}
+
+.card-body {
+  line-height: 0.75;
+  padding: 10px;
+}

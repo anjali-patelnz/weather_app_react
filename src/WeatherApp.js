@@ -1,6 +1,7 @@
 import React from "react";
 import MainWeather from "./MainWeather";
 import SearchBar from "./SearchBar";
+import Hourly from "./Hourly";
 
 export default function WeatherApp() {
   return (
@@ -13,6 +14,7 @@ export default function WeatherApp() {
         Humidity <span id="humidity">90</span>% <br />
         Wind <span id="wind">5 </span>km/h
       </p>
+      <Hourly />
     </div>
   );
 }
