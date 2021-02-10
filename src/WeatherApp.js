@@ -1,8 +1,10 @@
 import React from "react";
+import SearchBar from "./SearchBar";
 
 export default function WeatherApp() {
   return (
     <div className="WeatherApp">
+      <SearchBar />
       <h1 id="city">Auckland</h1>
       <p className="date">Sat, 7 November, 2:00</p>
 
