@@ -1,0 +1,31 @@
+.MainWeather {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.mainTemp {
+  font-size: 50px;
+}
+
+.units {
+  position: relative;
+  top: -25px;
+}
+
+.currentTemp .active {
+  color: white;
+  cursor: default;
+}
+
+.currentTemp .active:hover {
+  text-decoration: none;
+}
+
+.fa-thermometer-empty {
+  color: skyblue;
+}
+
+.fa-thermometer-full {
+  color: red;
+}
