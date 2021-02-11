@@ -1,6 +1,6 @@
 import React from "react";
 import MainWeather from "./MainWeather";
-import SearchBar from "./SearchBar";
+
 import Hourly from "./Hourly";
 
 import "./WeatherApp.css";
@@ -8,14 +8,35 @@ import "./WeatherApp.css";
 export default function WeatherApp() {
   return (
     <div className="WeatherApp">
-      <SearchBar />
-      <h1 className="city">Auckland</h1>
-      <p className="date">Sat, 7 November, 2:00</p>
+      <div className="SearchBar">
+        <form>
+          <div className="row justify-content-center">
+            <div className="col-8">
+              <input
+                type="search"
+                id="city-search"
+                placeholder="Enter a city..."
+                autofocus="off"
+                autocomplete="off"
+              />
+            </div>
+            <div className="col-3">
+              <button type="submit" id="search-button">
+                <i className="fas fa-search"></i>
+              </button>
+            </div>
+
+            <div class="col-1">
+              <button type="click" id="findMe-button">
+                <i className="fas fa-map-marker-alt"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
       <MainWeather />
-      <p className="factors">
-        Humidity: <span className="humidity">90</span>% <br />
-        Wind: <span className="wind">5 </span>km/h
-      </p>
+
       <Hourly />
     </div>
   );

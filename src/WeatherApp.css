@@ -16,19 +16,23 @@
   border-radius: 6px;
 }
 
-h1 {
-  text-align: center;
-  font-family: "Berkshire Swash", cursive;
-  font-size: 50px;
+input {
+  border: 1px solid #e3587b;
+}
+
+input:focus {
+  border-color: #e3587b;
+  box-shadow: 0 0 0 0.2rem #e30b5d;
+}
+
+button {
+  color: white;
+  background-color: #e3587b;
+  border-color: #e30b5d;
+}
+
+button:hover {
   color: #e30b5d;
-  padding-top: 15px;
-}
-
-.date,
-.factors {
-  text-align: center;
-}
-
-.factors {
-  padding-top: 10px;
+  background-color: white;
+  border-color: #e3587b;
 }

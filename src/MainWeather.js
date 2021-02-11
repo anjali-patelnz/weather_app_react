@@ -5,6 +5,8 @@ import "./MainWeather.css";
 export default function MainWeather() {
   return (
     <div className="MainWeather">
+      <h1 className="city">Auckland</h1>
+      <p className="date">Sat, 7 November, 2:00</p>
       <div className="row d-flex justify-content-center">
         <div className="col-sm">
           <div className="weatherIcon">
@@ -39,6 +41,10 @@ export default function MainWeather() {
           </div>
         </div>
       </div>
+      <p className="factors">
+        Humidity: <span className="humidity">90</span>% <br />
+        Wind: <span className="wind">5 </span>km/h
+      </p>
     </div>
   );
 }
