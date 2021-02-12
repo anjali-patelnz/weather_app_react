@@ -5,45 +5,56 @@ import Hourly from "./Hourly";
 
 import "./WeatherApp.css";
 
-export default function WeatherApp() {
+export default function WeatherApp(props) {
   const [loaded, setLoaded] = useState(false);
+  const [mainWeather, setMainWeather] = useState(" ");
 
   function handleApiCall(response) {
     console.log(response.data);
     setLoaded(true);
+    setMainWeather({
+      city: response.data.name,
+      mainTemp: response.data.main.temp,
+      mainLo: response.data.main.temp_min,
+      mainHi: response.data.main.temp_max,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+    });
   }
 
   if (loaded) {
     return (
       <div className="WeatherApp">
-        <div className="SearchBar">
-          <form>
-            <div className="row justify-content-center">
-              <div className="col-8">
-                <input
-                  type="search"
-                  id="city-search"
-                  placeholder="Enter a city..."
-                  autofocus="off"
-                  autocomplete="off"
-                />
-              </div>
-              <div className="col-3">
-                <button type="submit" id="search-button">
-                  <i className="fas fa-search"></i>
-                </button>
-              </div>
+        <div className="container">
+          <div className="SearchBar">
+            <form>
+              <div className="row justify-content-center">
+                <div className="col-8">
+                  <input
+                    type="search"
+                    id="city-search"
+                    placeholder="Enter a city..."
+                    autoFocus="off"
+                    autoComplete="off"
+                  />
+                </div>
+                <div className="col-3">
+                  <button type="submit" id="search-button">
+                    <i className="fas fa-search"></i>
+                  </button>
+                </div>
 
-              <div class="col-1">
-                <button type="click" id="findMe-button">
-                  <i className="fas fa-map-marker-alt"></i>
-                </button>
+                <div className="col-1">
+                  <button type="click" id="findMe-button">
+                    <i className="fas fa-map-marker-alt"></i>
+                  </button>
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
 
-        <MainWeather />
+        <MainWeather data={mainWeather} />
 
         <Hourly />
       </div>
