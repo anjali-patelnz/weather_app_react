@@ -14,7 +14,7 @@ export default function WeatherApp(props) {
     setLoaded(true);
     setMainWeather({
       city: response.data.name,
-      weatherIcon: response.data.weather[0].icon,
+      weatherIcon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       mainTemp: response.data.main.temp,
       description: response.data.weather[0].description,
       mainLo: response.data.main.temp_min,

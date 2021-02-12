@@ -16,8 +16,8 @@ export default function MainWeather(props) {
       <div className="row d-flex justify-content-centre">
         <div className="col weatherIcon">
           <img
-            src="http://openweathermap.org/img/wn/10d@2x.png"
-            alt=""
+            src={props.data.weatherIcon}
+            alt={props.data.description}
             className="mx-auto d-block"
           />
         </div>
