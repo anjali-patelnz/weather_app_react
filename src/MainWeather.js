@@ -18,7 +18,6 @@ export default function MainWeather(props) {
           <img
             src="http://openweathermap.org/img/wn/10d@2x.png"
             alt=""
-            id="mainIcon"
             className="mx-auto d-block"
           />
         </div>
@@ -37,7 +36,7 @@ export default function MainWeather(props) {
       </div>
       <div className="row d-flex justify-content-centre">
         <div className="col weatherDescription">
-          <p>Scattered Clouds</p>
+          <p className="text-capitalize">{props.data.description}</p>
         </div>
         <div className="col mainHiLo">
           <p>

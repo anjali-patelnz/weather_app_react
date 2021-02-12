@@ -14,7 +14,9 @@ export default function WeatherApp(props) {
     setLoaded(true);
     setMainWeather({
       city: response.data.name,
+      weatherIcon: response.data.weather[0].icon,
       mainTemp: response.data.main.temp,
+      description: response.data.weather[0].description,
       mainLo: response.data.main.temp_min,
       mainHi: response.data.main.temp_max,
       humidity: response.data.main.humidity,
