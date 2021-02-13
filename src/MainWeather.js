@@ -1,4 +1,5 @@
 import React from "react";
+import Timestamp from "./Timestamp";
 
 import "./MainWeather.css";
 
@@ -11,7 +12,8 @@ export default function MainWeather(props) {
         </div>
       </div>
       <div className="col">
-        <p className="date">Sat, 7 November, 2:00</p>
+        <Timestamp date={props.data.date} />
+        <p className="date">Original</p>
       </div>
       <div className="row d-flex justify-content-centre">
         <div className="col weatherIcon">
