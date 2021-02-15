@@ -7,6 +7,7 @@ import "./WeatherApp.css";
 
 export default function WeatherApp(props) {
   const [loaded, setLoaded] = useState(false);
+  const [city, setCity] = useState(props.defaultCity);
   const [mainWeather, setMainWeather] = useState(" ");
 
   function handleApiCall(response) {
@@ -24,8 +25,18 @@ export default function WeatherApp(props) {
     });
   }
 
+  function search() {
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c31b4fce1a46009ae0af063ea44bb353&units=metric`;
+    axios.get(apiUrl).then(handleApiCall);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
+    search();
+  }
+
+  function handleFindCity(event) {
+    setCity(event.target.value);
   }
 
   let form = (
@@ -38,6 +49,7 @@ export default function WeatherApp(props) {
             placeholder="Enter a city..."
             autoFocus="off"
             autoComplete="off"
+            onChange={handleFindCity}
           />
         </div>
         <div className="col-2">
@@ -70,9 +82,7 @@ export default function WeatherApp(props) {
       </div>
     );
   } else {
-    let city = "Auckland";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c31b4fce1a46009ae0af063ea44bb353&units=metric`;
-    axios.get(apiUrl).then(handleApiCall);
+    search();
 
     return "Loading...";
   }

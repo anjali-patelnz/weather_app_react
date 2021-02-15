@@ -21,7 +21,6 @@ export default function Forcast(props) {
           <Hourly data={forcast.list[3]} />
           <Hourly data={forcast.list[4]} />
         </div>
-        <p>{props.city}</p>
       </div>
     );
   } else {
