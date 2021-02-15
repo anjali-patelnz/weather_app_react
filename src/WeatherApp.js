@@ -24,35 +24,43 @@ export default function WeatherApp(props) {
     });
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
+  let form = (
+    <form className="search-form" onSubmit={handleSubmit}>
+      <div className="row">
+        <div className="col-8">
+          <input
+            type="text"
+            className="form-control city-search"
+            placeholder="Enter a city..."
+            autoFocus="off"
+            autoComplete="off"
+          />
+        </div>
+        <div className="col-2">
+          <button type="submit" className="btn btn-pimary search-button">
+            <i className="fas fa-search"></i>
+          </button>
+        </div>
+
+        <div className="col-2">
+          <button type="click" className="btn btn-primary findMe-button">
+            <i className="fas fa-map-marker-alt"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  );
+
   if (loaded) {
     return (
       <div className="WeatherApp">
         <div className="container">
-          <div className="SearchBar">
-            <form>
-              <div className="row justify-content-center">
-                <div className="col-8">
-                  <input
-                    type="search"
-                    id="city-search"
-                    placeholder="Enter a city..."
-                    autoFocus="off"
-                    autoComplete="off"
-                  />
-                </div>
-                <div className="col-3">
-                  <button type="submit" id="search-button">
-                    <i className="fas fa-search"></i>
-                  </button>
-                </div>
-
-                <div className="col-1">
-                  <button type="click" id="findMe-button">
-                    <i className="fas fa-map-marker-alt"></i>
-                  </button>
-                </div>
-              </div>
-            </form>
+          <div className="row">
+            <div className="col-12 SearchBar">{form}</div>
           </div>
         </div>
 

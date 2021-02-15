@@ -25,7 +25,8 @@ input:focus {
   box-shadow: 0 0 0 0.2rem #e30b5d;
 }
 
-button {
+.search-button,
+.findMe-button {
   color: white;
   background-color: #e3587b;
   border-color: #e30b5d;
