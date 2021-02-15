@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import MainWeather from "./MainWeather";
-import Hourly from "./Hourly";
+import Forcast from "./Forcast";
 
 import "./WeatherApp.css";
 
@@ -58,7 +58,7 @@ export default function WeatherApp(props) {
 
         <MainWeather data={mainWeather} />
 
-        <Hourly city={mainWeather.city} />
+        <Forcast city={mainWeather.city} />
       </div>
     );
   } else {
