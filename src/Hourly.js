@@ -14,10 +14,15 @@ export default function Hourly(props) {
     return `${hourlyTemperature}°`;
   }
 
+  function hourlyWeatherIcon() {
+    let hourlyWeatherIcon = props.data.weather[0].icon;
+    return `http://openweathermap.org/img/wn/${hourlyWeatherIcon}@2x.png`;
+  }
+
   return (
     <div className="card Hourly">
       <div className="card-body">
-        <img className="card-img-top" src="" />
+        <img className="card-img-top" src={hourlyWeatherIcon()} />
         <p className="card-text">{hourlyTemperature()}</p>
         <p className="card-text">{hourlyTimestamp()}</p>
       </div>
