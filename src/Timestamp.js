@@ -1,10 +1,12 @@
 import React from "react";
 
 export default function Timestamp(props) {
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  let day = days[props.date.getDay()];
+  let date = new Date(props.date);
 
-  let dateMonth = props.date.getDate();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = days[date.getDay()];
+
+  let dateMonth = date.getDate();
 
   let months = [
     "January",
@@ -20,14 +22,14 @@ export default function Timestamp(props) {
     "November",
     "December",
   ];
-  let month = months[props.date.getMonth()];
+  let month = months[date.getMonth()];
 
-  let hours = props.date.getHours();
+  let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
 
-  let minutes = props.date.getMinutes();
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
