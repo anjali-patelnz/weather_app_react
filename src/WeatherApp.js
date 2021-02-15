@@ -58,7 +58,7 @@ export default function WeatherApp(props) {
 
         <MainWeather data={mainWeather} />
 
-        <Hourly />
+        <Hourly city={mainWeather.city} />
       </div>
     );
   } else {

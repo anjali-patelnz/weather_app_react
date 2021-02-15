@@ -13,7 +13,6 @@ export default function MainWeather(props) {
       </div>
       <div className="col">
         <Timestamp date={props.data.date} />
-        <p className="date">Original</p>
       </div>
       <div className="row d-flex justify-content-centre">
         <div className="col weatherIcon">
