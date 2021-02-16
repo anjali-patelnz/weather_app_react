@@ -9,6 +9,7 @@ export default function WeatherApp(props) {
   const [loaded, setLoaded] = useState(false);
   const [city, setCity] = useState(props.defaultCity);
   const [mainWeather, setMainWeather] = useState(" ");
+  const [unit, setUnit] = useState("celsius");
 
   function handleApiCall(response) {
     setLoaded(true);
@@ -94,9 +95,9 @@ export default function WeatherApp(props) {
           </div>
         </div>
 
-        <MainWeather data={mainWeather} />
+        <MainWeather data={mainWeather} unit={unit} setUnit={setUnit} />
 
-        <Forcast city={mainWeather.city} />
+        <Forcast city={mainWeather.city} unit={unit} />
       </div>
     );
   } else {
