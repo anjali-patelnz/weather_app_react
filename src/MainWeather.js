@@ -1,6 +1,7 @@
 import React from "react";
 import Timestamp from "./Timestamp";
 import MainTemperature from "./MainTemperature";
+import WeatherIcon from "./WeatherIcon";
 
 import "./MainWeather.css";
 
@@ -36,10 +37,9 @@ export default function MainWeather(props) {
       </div>
       <div className="row d-flex justify-content-centre">
         <div className="col weatherIcon">
-          <img
-            src={props.data.weatherIcon}
+          <WeatherIcon
+            code={props.data.weatherIcon}
             alt={props.data.description}
-            className="mx-auto d-block"
           />
         </div>
         <MainTemperature
