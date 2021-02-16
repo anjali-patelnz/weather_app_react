@@ -39,6 +39,20 @@ export default function WeatherApp(props) {
     setCity(event.target.value);
   }
 
+  function findCoordinates(position) {
+    const apiKey = "c31b4fce1a46009ae0af063ea44bb353";
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let geoApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+    axios.get(geoApiUrl).then(handleApiCall);
+  }
+
+  function handleGeoLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(findCoordinates);
+  }
+
   let form = (
     <form className="search-form" onSubmit={handleSubmit}>
       <div className="row">
@@ -59,7 +73,11 @@ export default function WeatherApp(props) {
         </div>
 
         <div className="col-2">
-          <button type="click" className="btn btn-primary findMe-button">
+          <button
+            type="click"
+            className="btn btn-primary findMe-button"
+            onClick={handleGeoLocation}
+          >
             <i className="fas fa-map-marker-alt"></i>
           </button>
         </div>
