@@ -20,11 +20,21 @@ export default function Footer() {
     </a>
   );
 
+  let amCharts = (
+    <a
+      href="https://www.amcharts.com/free-animated-svg-weather-icons/"
+      target="_blank"
+    >
+      amCharts
+    </a>
+  );
+
   return (
     <div className="Footer">
       <p>
         This site is coded by {anjaliProfile} and is open-sourced on{" "}
-        {anjaliGithub}
+        {anjaliGithub} <br />
+        Weather icons by {amCharts}
       </p>
     </div>
   );
