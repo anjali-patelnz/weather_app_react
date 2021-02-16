@@ -15,11 +15,11 @@ export default function Forcast(props) {
     return (
       <div className="Forcast">
         <div className="card-group hourlyForcast">
-          <Hourly data={forcast.list[0]} />
-          <Hourly data={forcast.list[1]} />
-          <Hourly data={forcast.list[2]} />
-          <Hourly data={forcast.list[3]} />
-          <Hourly data={forcast.list[4]} />
+          <Hourly data={forcast.list[0]} unit={props.unit} />
+          <Hourly data={forcast.list[1]} unit={props.unit} />
+          <Hourly data={forcast.list[2]} unit={props.unit} />
+          <Hourly data={forcast.list[3]} unit={props.unit} />
+          <Hourly data={forcast.list[4]} unit={props.unit} />
         </div>
       </div>
     );
