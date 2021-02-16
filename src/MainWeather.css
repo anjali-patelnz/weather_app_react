@@ -14,15 +14,6 @@
   top: -25px;
 }
 
-.currentTemp .active {
-  color: white;
-  cursor: default;
-}
-
-.currentTemp .active:hover {
-  text-decoration: none;
-}
-
 .fa-thermometer-empty {
   color: skyblue;
 }
