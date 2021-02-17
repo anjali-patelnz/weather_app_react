@@ -16,11 +16,11 @@
   border-radius: 6px;
 }
 
-input {
+.city-search {
   border: 1px solid #e3587b;
 }
 
-input:focus {
+.city-search:focus {
   border-color: #e3587b;
   box-shadow: 0 0 0 0.2rem #e30b5d;
 }
@@ -32,7 +32,13 @@ input:focus {
   border-color: #e30b5d;
 }
 
-button:hover {
+.WeatherApp .search-button:hover {
+  color: #e30b5d;
+  background-color: white;
+  border-color: #e3587b;
+}
+
+.WeatherApp .findMe-button:hover {
   color: #e30b5d;
   background-color: white;
   border-color: #e3587b;
