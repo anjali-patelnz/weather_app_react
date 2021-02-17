@@ -34,7 +34,7 @@ export default function Footer() {
       <p>
         This site is coded by {anjaliProfile} and is open-sourced on{" "}
         {anjaliGithub} <br />
-        Weather icons by {amCharts}
+        <span className="shoutout">Weather icons by {amCharts}</span>
       </p>
     </div>
   );

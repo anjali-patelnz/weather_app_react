@@ -12,3 +12,7 @@
 .Footer p {
   margin-bottom: 0;
 }
+
+.Footer .shoutout {
+  font-size: 10px;
+}
