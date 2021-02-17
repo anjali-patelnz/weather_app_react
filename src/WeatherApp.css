@@ -43,3 +43,15 @@
   background-color: white;
   border-color: #e3587b;
 }
+
+.WeatherApp .findMe-button:active {
+  color: #e30b5d;
+  background-color: white;
+  border-color: #e3587b;
+}
+
+.btn:focus {
+  color: #e30b5d;
+  background-color: white;
+  border-color: #e3587b;
+}
