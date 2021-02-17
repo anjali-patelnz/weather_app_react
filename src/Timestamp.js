@@ -36,7 +36,7 @@ export default function Timestamp(props) {
 
   return (
     <div className="Timestamp">
-      {day}, {dateMonth} {month}, {hours}:{minutes}
+      <i class="fas fa-sync"></i> {day}, {dateMonth} {month}, {hours}:{minutes}
     </div>
   );
 }
